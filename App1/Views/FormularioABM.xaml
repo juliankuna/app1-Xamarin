@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:App1.ViewModels" 
+             x:Class="App1.Views.FormularioABM">
+
+    <ContentPage.BindingContext>
+        <viewmodels:FormularioModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="FORMULARIOS"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Text="{Binding Formulario.Id}" Placeholder="ID"  HorizontalOptions="FillAndExpand"/>
+            
+            <Entry Text="{Binding Formulario.Fecha}" Placeholder="dd/mm/aaaa" HorizontalOptions="FillAndExpand" />
+
+            <Entry Text="{Binding Formulario.Titulo}" Placeholder="titulo"  HorizontalOptions="FillAndExpand" />
+            <Entry Text="{Binding Formulario.Descripcion}" Placeholder="descripcion" HorizontalOptions="FillAndExpand" />
+
+
+            
+            <Button Text="Modificar" Command="{Binding ModificarFormulario}" Clicked="btnModificar" HorizontalOptions="FillAndExpand" />
+            <Button Text="Eliminar" Command="{Binding EliminarFormulario}"  Clicked="btnEliminar" HorizontalOptions="FillAndExpand" />
+           
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

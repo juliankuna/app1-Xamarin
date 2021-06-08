@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+    <StackLayout Margin="0,30,0,0">
+        
+
+            <Button Text="Nuevo" HorizontalOptions="FillAndExpand" BackgroundColor="Yellow" 
+                    x:Name="btnnuevo" />
+
+
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Orange">
+                <Label Text="Buscar por código de  formulario: " />
+                <Entry x:Name="cajacodigo" HorizontalOptions="FillAndExpand"/>
+                
+
+                <Button Text="ABM" x:Name="btnABM" />
+            </StackLayout>
+
+
+
+    </StackLayout>
+
+</ContentPage>
